@@ -1,0 +1,13 @@
+{
+    "welcome": "Welcome to our application",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "profile": "Profile",
+    "language": "Language",
+    "appearance": "Appearance",
+    "dark_mode": "Dark Mode",
+    "light_mode": "Light Mode"
+}
