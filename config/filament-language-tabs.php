@@ -19,5 +19,5 @@ return [
     | This can be used if one translation or language is optional
     |
     */
-    'required_locales' => ['ar', 'en'],
+    'required_locales' => ['ar'],
 ];

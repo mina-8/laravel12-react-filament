@@ -44,8 +44,12 @@ class AdminPanelProvider extends PanelProvider
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
             ])
-            ->plugin(\BezhanSalleh\FilamentShield\FilamentShieldPlugin::make())
-            ->plugin(\TomatoPHP\FilamentLanguageSwitcher\FilamentLanguageSwitcherPlugin::make())
+            ->plugins([
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
+                \TomatoPHP\FilamentLanguageSwitcher\FilamentLanguageSwitcherPlugin::make()
+            ])
+            // ->plugin(\BezhanSalleh\FilamentShield\FilamentShieldPlugin::make())
+            // ->plugin(\TomatoPHP\FilamentLanguageSwitcher\FilamentLanguageSwitcherPlugin::make())
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
