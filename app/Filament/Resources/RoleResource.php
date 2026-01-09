@@ -18,7 +18,9 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\HtmlString;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Unique;
-use App\Enums\RoleEnum;
+use App\Enums\RolesEnum;
+use Filament\Forms\Components\Select;
+
 class RoleResource extends Resource implements HasShieldPermissions
 {
     use HasShieldFormComponents;
@@ -53,9 +55,9 @@ class RoleResource extends Resource implements HasShieldPermissions
                                 //     )
                                 //     ->required()
                                 //     ->maxLength(255),
-                                Forms\Components\Select::make('name')
+                                Select::make('name')
                                     ->label(__('filament-shield::filament-shield.field.name'))
-                                    ->options(RoleEnum::options())
+                                    ->options(RolesEnum::options())
                                     ->unique(
                                         ignoreRecord: true, /** @phpstan-ignore-next-line */
                                         modifyRuleUsing: fn (Unique $rule) => Utils::isTenancyEnabled() ? $rule->where(Utils::getTenantModelForeignKey(), Filament::getTenant()?->id) : $rule

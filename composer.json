@@ -15,6 +15,7 @@
         "laravel/tinker": "^2.10.1",
         "laravel/wayfinder": "^0.1.9",
         "pixelpeter/filament-language-tabs": "^2.0",
+        "rawilk/filament-quill": "^1.0",
         "spatie/laravel-permission": "^6.23",
         "spatie/laravel-translatable": "^6.12",
         "tomatophp/filament-language-switcher": "^1.0"
